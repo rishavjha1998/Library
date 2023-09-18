@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="wrapper">
+			<div class="inner">
+				<img src="{{ url_for('static', filename="register/images/image-1.png") }} " alt="" class="image-1">
+
+				<form action="" method="POST">
+
+					{{ form.csrf_token }}
+					
+					<h3>New Account?</h3>
+					<div class="form-holder">
+					
+						<p class="lnr lnr-user"></p>
+					    <p>{{form.Username()}}</p>
+					</div>
+					<div class="form-holder">
+						<p class="lnr lnr-phone-handset"></p>
+						<p>{{form.Phone_Number()}}</p>
+					</div>
+					<div class="form-holder">
+						<p class="lnr lnr-envelope"></p>
+						<p>{{form.Email()}}</p>
+					</div>
+					<div class="form-holder">
+						<p class="lnr lnr-lock"></p>
+						<p>{{form.Password()}}</p>
+					</div>
+					<div class="form-holder">
+						<p class="lnr lnr-lock"></p>
+						<p>{{form.Confirm_Password()}}</p>
+					</div>
+					
+					<button type="submit"><span>Register</span></button>
+
+
+				</form>
+	
+				
+				<img src="{{ url_for('static', filename="register/images/image-2.png") }} " alt="" class="image-2">
+			</div>
+			
+		</div>
+		
+		<script src=" {{ url_for('static', filename="register/js/jquery-3.3.1.min.js") }} " ></script>
+		<script src=" {{ url_for('static', filename="register/js/main.js") }} "></script>
+		
+<!-- LINEARICONS -->
+<link rel="stylesheet" href=" {{ url_for('static', filename="register/fonts/linearicons/style.css") }} ">
+		
+<!-- STYLE CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename="register/css/style.css") }} ">
+
+
+
+{% endblock %} 
+
+

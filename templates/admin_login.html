@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="" method="POST">
+
+    <div class="form">
+        <h2>Admin Login</h2>
+        <div class="input">
+            <div class="inputBox">
+                <label for="">Username</label>
+                <input type="text" name="Username" placeholder="xxxx">
+            </div>
+            <div class="inputBox">
+                <label for="">Password</label>
+                <input type="password" placeholder="xxxx" name="Password">
+            </div>
+            <div class="inputBox">
+                <input type="submit" name="submit" value="Sign In">
+            </div>
+        </div>
+        <p class="forgot">Forgot Password? <a href="{{url_for('login')}}">Click Here</a></p>
+
+    </div>
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/static/admin_login/admin.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+{% endblock %}

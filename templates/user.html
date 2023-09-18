@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<button type="button" class="btn btn-primary btn-lg">Welcome {{usr}}</button>
+<p style="text-align: center;">List of Books Issued by {{usr}}</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in book_list %}
+        <tr>
+            <td>{{book.Id}}</td>
+            <td>{{book.Title}}</td>
+            <td>{{book.Author}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<link rel="stylesheet" href="/static/user.css">
+{% endblock %}
